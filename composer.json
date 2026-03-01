@@ -1,0 +1,27 @@
+{
+	"name": "nextcloud/integration_stickers",
+	"type": "project",
+	"license": "AGPL-3.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"OCA\\Stickers\\": "lib/"
+		}
+	},
+	"minimum-stability": "stable",
+	"require-dev": {
+		"nextcloud/ocp": "dev-master",
+		"nextcloud/coding-standard": "^1.1",
+		"phpunit/phpunit": "^10"
+	},
+	"require": {
+		"php": ">=8.1.0"
+	},
+	"scripts": {
+		"lint": "find . -name \\*.php -not -path './vendor/*' -not -path './build/*' -print0 | xargs -0 -n1 php -l"
+	},
+	"config": {
+		"platform": {
+			"php": "8.1.0"
+		}
+	}
+}
