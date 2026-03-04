@@ -80,6 +80,20 @@ If your AIO container name differs, replace `nextcloud-aio-nextcloud` with your 
 4. Selecting a sticker emits its URL back to Talk, which inserts it into chat.
 5. The URL is resolved as a reference and rendered as an image preview.
 
+## Additional Nice Things
+
+Using the <a href="https://apps.nextcloud.com/apps/theming_customcss" target="_blank">Custom CSS app</a> from the NextCloud AppStore lets you tweak the appearance so the filename isn't obvious. Install the app and then in Administration Settings, under Theming, paste this into the Custom CSS app:
+
+```
+  /* Talk only, sticker links only */
+  #content.app-spreed .markdown-message a[href*="/apps/integration_stickers/s/"],
+  #content.app-spreed .markdown-message a[href*="giphy.com/gifs/"],
+  #content.app-spreed .markdown-message a[href*="/apps/integration_stickers/sticker/"] {
+  	display: none !important;
+  }
+ ```
+
+
 ## Development
 
 ### PHP
